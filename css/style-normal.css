@@ -40,7 +40,9 @@
 /* Header */
 
 	#header nav ul li {
-		margin-left: 1em;
+		margin-left: 1.5em;
+				margin-top:.5em;
+				margin-bottom:.5em;
 	}
 
 /* Banner */
