@@ -1132,3 +1132,85 @@
 			display: inline-block;
 			width: 5em;
 		}
+
+/*See More CSS*/
+.contain {
+  position: relative;
+  height: auto;
+  width:100%;
+}
+
+.contain p {
+	margin:0;
+	padding:0;
+}
+.non-standard-adjustments p{
+	margin:0 0 0 0;
+	text-align:left;
+}
+
+.non-standard-adjustments span{
+	text-align:left;
+}
+
+[type="checkbox"] {
+  position: absolute;
+  left: -9999px; 
+}
+label {
+  /*background: #e4e3df;*/
+  display: block;
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+}
+
+label:before,
+label:after {
+  position: absolute;
+}
+
+label:before {
+  content: 'See more';
+  left:0px;
+}
+
+label:after {
+  /*content: '⇣●';
+  right: 10px;
+  animation: sudo .85s linear infinite alternate;*/
+}
+
+@keyframes sudo { 
+  from { 
+    transform: translateY(-2px); 
+  }
+  to { 
+    transform: translateY(2px); 
+  }   
+}
+
+[type="checkbox"] ~ span {
+  display: none;
+}
+
+[type="checkbox"]:checked ~ span {
+  display: block;
+}
+
+[type="checkbox"]:checked + label {
+  top: 100%;
+}
+
+[type="checkbox"]:checked + label:before {
+  content: 'See less';
+}
+
+[type="checkbox"]:checked + label:after {
+  /*content: '⇡●';*/
+}
+
+
+
